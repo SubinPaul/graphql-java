@@ -1,4 +1,6 @@
 type Query {
 	firstQuery : String
 	secondQuery : String
+	fullName (firstName : String , lastName : String) : String
 }
+
