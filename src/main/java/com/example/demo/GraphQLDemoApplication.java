@@ -7,15 +7,12 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan({"com.example.demo.query", "com.example.demo.service",
-		"com.example.demo.resolver"
-		})
+@ComponentScan({"com.example.demo.query", "com.example.demo.service", "com.example.demo.resolver"})
 @EntityScan("com.example.demo.entity")
 @EnableJpaRepositories("com.example.demo.repository")
 class GraphQLDemoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(GraphQLDemoApplication.class, args);
-	}
-
+  public static void main(String[] args) {
+    SpringApplication.run(GraphQLDemoApplication.class, args);
+  }
 }

@@ -10,31 +10,28 @@ import org.springframework.stereotype.Component;
 @Component
 public class Query implements GraphQLQueryResolver {
 
-  @Autowired
-  StudentService studentService;
+  @Autowired StudentService studentService;
 
-  public String firstQuery () {
+  public String firstQuery() {
     return "First Query";
   }
 
-  public String secondQuery () {
+  public String secondQuery() {
     return "Second Query";
   }
 
-  //Pass parameters
-  public String fullName(String firstName, String lastName)
-  {
+  // Pass parameters
+  public String fullName(String firstName, String lastName) {
     return firstName + lastName;
   }
 
-  //Pass parameters json request
-  public String fullNameJson(SampleRequest sampleRequest)
-  {
+  // Pass parameters json request
+  public String fullNameJson(SampleRequest sampleRequest) {
     return sampleRequest.getFirstName() + sampleRequest.getLastName();
   }
 
-  //Get Student
-  public StudentResponse student(long id){
-   return  new StudentResponse((studentService.getStudentById(id)));
+  // Get Student
+  public StudentResponse student(long id) {
+    return new StudentResponse((studentService.getStudentById(id)));
   }
 }

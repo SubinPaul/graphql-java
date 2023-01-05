@@ -24,7 +24,7 @@ public class StudentResponseResolver implements GraphQLResolver<StudentResponse>
     return learningSubjects;
   }
 
-  public String getFullName (StudentResponse studentResponse){
+  public String getFullName(StudentResponse studentResponse) {
     return studentResponse.getFirstName() + " " + studentResponse.getLastName();
   }
 }

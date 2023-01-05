@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 public class SampleRequest {
 
-	private String firstName;
-	
-	private String lastName;
+  private String firstName;
+
+  private String lastName;
 }
