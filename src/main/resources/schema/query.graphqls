@@ -18,7 +18,7 @@ lastName : String
 email : String
 Street : String
 city : String
-learningSubjects : [SubjectResponse]
+learningSubjects (subjectNameFilter : SubjectNameFilter): [SubjectResponse]
 fullName : String
 }
 
@@ -26,5 +26,12 @@ type SubjectResponse {
 	id : Long
 	subjectName : String
 	marksObtained : Float
+}
+
+enum SubjectNameFilter {
+  All,
+	Java,
+	MySQL,
+	MongoDB
 }
 
