@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.example.demo.request;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -7,6 +7,7 @@ import lombok.Setter;
 @Setter
 public class SampleRequest {
 
-  private String firstName;
-  private String lastName;
+	private String firstName;
+	
+	private String lastName;
 }
