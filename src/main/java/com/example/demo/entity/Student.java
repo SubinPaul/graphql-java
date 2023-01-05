@@ -1,7 +1,7 @@
 package com.example.demo.entity;
 
+import com.example.demo.request.CreateStudentRequest;
 import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -12,7 +12,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -44,4 +43,10 @@ public class Student {
 
   @OneToMany(mappedBy = "student", fetch = FetchType.EAGER)
   private List<Subject> learningSubjects;
+
+  public Student(CreateStudentRequest createStudentRequest) {
+    this.firstName = createStudentRequest.getFirstName();
+    this.lastName = createStudentRequest.getLastName();
+    this.email = createStudentRequest.getEmail();
+  }
 }
