@@ -19,6 +19,7 @@ email : String
 Street : String
 city : String
 learningSubjects : [SubjectResponse]
+fullName : String
 }
 
 type SubjectResponse {

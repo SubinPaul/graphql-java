@@ -29,6 +29,8 @@ public class StudentResponse {
 
 	// this is for internal use. do not put in schema file
 	private Student student;
+
+	private String fullname;
 	
 	public StudentResponse (Student student) {
 		this.student = student;
